@@ -15,9 +15,23 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: ImageExample()
+        appBar: AppBar(
+          title: Text('Flutter Basics'),
+          centerTitle: true,
+          backgroundColor: Colors.cyan,
+          foregroundColor: Colors.white,
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+          ],
+        ),
+        backgroundColor: Colors.amber,
+        body: ImageExample(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.add),
+        ),
       ),
     );
   }
